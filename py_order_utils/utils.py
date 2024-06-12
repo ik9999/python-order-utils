@@ -15,7 +15,7 @@ def normalize(s: str) -> str:
 
 
 def normalize_address(address: str) -> str:
-    return web3.Web3.toChecksumAddress(address)
+    return web3.Web3.to_checksum_address(address)
 
 
 def generate_seed() -> int:
@@ -35,7 +35,7 @@ def hash_bytes(b):
 
 
 def solidity_keccak(typ, val):
-    return web3.Web3.solidityKeccak(
+    return web3.Web3.solidity_keccak(
         abi_types=[typ],
         values=[val],
     )
